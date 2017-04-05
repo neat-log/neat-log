@@ -1,6 +1,6 @@
 {
   "name": "neat-log",
-  "description": "a neat logger",
+  "description": "a neat logger for the command line",
   "version": "1.0.0",
   "author": "Joe Hand <joe@hand.email>",
   "bugs": {
