@@ -5,7 +5,7 @@ var chalk = require('chalk')
 var views = [headerView, progressView]
 var log = neatLog(views)
 log.use(trackProgress)
-log.render()
+log.render() // force an immediate render
 
 function headerView (state) {
   return output`
@@ -21,7 +21,7 @@ function progressView (state) {
 }
 
 function trackProgress (state, bus) {
-  if (!state.seconds) state.seconds = 0
+  state.seconds = 0
   setInterval(function () {
     state.seconds++
     bus.emit('render')

@@ -1,6 +1,53 @@
 # neat-log
 
-A neat logger for command line tools, inspired by Choo!
+[![npm][npm-image]][npm-url]
+[![travis][travis-image]][travis-url]
+[![standard][standard-image]][standard-url]
+
+A neat logger for command line tools, inspired by [Choo](https://github.com/yoshuawuyts/choo)! I've heard so much about how awesome front-end javascript has gotten, I wanted to bring some of that magic to command line applications.
+
+* Use tagged template literals to output to console log.
+* Automatically diff template output with existing console (via [ansi-diff-stream](https://github.com/mafintosh/ansi-diff-stream))
+* Update console output in any order with event based output.
+* Pretty neat!
+
+## Example
+
+See a basic example here and another more complex one in `example.js`.
+
+```js
+var neatLog = require('neat-log')
+var output = require('neat-log/output')
+
+var neat = neatLog(view)
+neat.use(countTheSeconds)
+
+function view (state) {
+  // This gets printed to the console! Wow. So neat.
+  return output`
+    Hello World!
+    I've been running for ${state.seconds} second${state.seconds === 1 ? '' : 's'}.
+  `
+}
+
+function countTheSeconds (state, bus) {
+  state.seconds = 0
+  setInterval(function () {
+    state.seconds++
+    bus.emit('render')
+  }, 1000)
+  bus.emit('render')
+}
+```
+
+This example will print to the console: 
+
+```
+Hello world!
+I've been running for 0 seconds.
+```
+
+And update every second!
 
 ## Install
 
@@ -8,43 +55,36 @@ A neat logger for command line tools, inspired by Choo!
 npm install neat-log
 ```
 
-## Usage
+## API
 
-```js
-var neatLog = require('neat-log')
-var output = require('neat-log/output')
+Heavily inspired by Choo! If you get confused here, check docs there because they are much nicer =).
 
-var log = neatLog(mainView)
-log.use(trackSeconds)
-log.render() // manually render to initial state
+### `var neat = neatLog(views, [opts])`
 
-function mainView (state) {
-  if (!state.seconds) state.seconds = 0
-  return output`
-    Hello World!
-    I've been running for ${state.seconds} seconds.
-  `
-}
+* `views` is a single function or array of functions that return string(s) to output to the console. `views` are passed the `state` as the first argument.
+* `opts.logspeed`, default 250ms, throttles how often output is rendered.
 
-function trackSeconds (state, bus) {
-  setInterval(function () {
-    state.seconds++
-    bus.emit('render')
-  }, 1000)
-}
-```
+### `neat.use(callback(state, emitter))`
 
-## Contributing
+Use a `function (state, bus)` to change state and emit events via the bus. You can call `bus.emit()` to emit a new event and `bus.on()` to listen.
 
-Contributions welcome! Please read the [contributing guidelines](CONTRIBUTING.md) first.
+### `neat.render()`
+
+For an immediate render. Helpful outside of a use function.
+
+### `var output = require('neat-log/output')`
+
+Get a tagger for your template literals to make them nicer. Removes spaces and stuff™.
+
+## TODO
+
+* Use `bus.on('*')` to make a cool debug option
+* Could expose status-logger and ansi-diff-stream stuff if needed (e.g. `log.clear()`)
+* Other neat things
 
 ## License
 
 [MIT](LICENSE.md)
-
-[![npm][npm-image]][npm-url]
-[![travis][travis-image]][travis-url]
-[![standard][standard-image]][standard-url]
 
 [npm-image]: https://img.shields.io/npm/v/neat-log.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/neat-log

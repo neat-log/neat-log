@@ -1,5 +1,6 @@
 var logger = require('status-logger')
 var nanobus = require('nanobus')
+var throttle = require('lodash.throttle')
 
 module.exports = neatLog
 
@@ -8,11 +9,12 @@ function neatLog (views, opts) {
   if (!Array.isArray(views)) views = [views]
   if (!opts) opts = {}
 
+  var logspeed = opts.logspeed || 250
   var state = {}
   var output = []
   var log = logger([], opts)
   var bus = nanobus()
-  bus.on('render', render)
+  bus.on('render', throttle(render, logspeed))
 
   return {
     render: render,

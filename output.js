@@ -7,8 +7,14 @@ function toOutput(pieces, ... substitutions) {
       result += substitutions[i] + pieces[i + 1]
   }
 
-  // Remove any indents
-  return result.trim().split('\n').map(function (line) {
+  // Remove any indents and -> []
+  result = result.split('\n').map(function (line) {
     return line.trim()
-  }).join('\n')
+  })
+
+  // Remove spacers if empty (need to allow newline spacers)
+  if (result[0] === '') result.shift()
+  if (result[result.length - 1] === '') result.pop()
+
+  return result.join('\n')
 }

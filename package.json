@@ -1,7 +1,7 @@
 {
   "name": "neat-log",
   "description": "a neat logger",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "author": "Joe Hand <joe@hand.email>",
   "bugs": {
     "url": "https://github.com/joehand/neat-log/issues"
@@ -23,6 +23,7 @@
     "test": "standard && tape test/*.js | tap-spec"
   },
   "dependencies": {
+    "lodash.throttle": "^4.1.1",
     "nanobus": "^3.0.0",
     "status-logger": "^3.1.0"
   }
