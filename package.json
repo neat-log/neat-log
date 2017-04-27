@@ -7,6 +7,7 @@
     "url": "https://github.com/joehand/neat-log/issues"
   },
   "devDependencies": {
+    "prompt": "^1.0.0",
     "standard": "*",
     "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
