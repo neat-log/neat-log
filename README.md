@@ -13,7 +13,7 @@ A neat logger for command line tools, inspired by [Choo](https://github.com/yosh
 
 ## Example
 
-See a basic example here and another more complex one in `example.js`.
+Each neat logger has two components: a `view` and functions that modify state and emit events.
 
 ```js
 var neatLog = require('neat-log')
@@ -59,14 +59,30 @@ npm install neat-log
 
 Heavily inspired by Choo! If you get confused here, check docs there because they are much nicer =).
 
-### `var neat = neatLog(views, [opts])`
+### `var neat = neatLog(view(state), [opts])`
 
 * `views` is a single function or array of functions that return string(s) to output to the console. `views` are passed the `state` as the first argument.
 * `opts.logspeed`, default 250ms, throttles how often output is rendered.
 
-### `neat.use(callback(state, emitter))`
+### `neat.use(callback(state, bus))`
 
-Use a `function (state, bus)` to change state and emit events via the bus. You can call `bus.emit()` to emit a new event and `bus.on()` to listen.
+Use a `function (state, bus)` to change state and emit events via the bus. You can call `bus.emit()` to emit a new event and `bus.on()` to listen. Emitter is an instance of [nanobus](https://github.com/yoshuawuyts/nanobus/).
+
+`bus` also has some special functions exposed:
+
+#### `bus.render()`
+
+Cause an immediate render (normally it'd be throttled). This is helpful to do before exiting.
+
+#### `bus.clear()`
+
+Clear all existing output. This is useful to do before throwing error messages:
+
+```js
+bus.clear()
+console.error('my error')
+process.exit(1)
+```
 
 ### `neat.render()`
 
@@ -79,7 +95,7 @@ Get a tagger for your template literals to make them nicer. Removes spaces and s
 ## TODO
 
 * Use `bus.on('*')` to make a cool debug option
-* Could expose status-logger and ansi-diff-stream stuff if needed (e.g. `log.clear()`)
+* `opts.debug` and `opts.quiet` ?
 * Other neat things
 
 ## License
