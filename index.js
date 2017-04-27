@@ -11,7 +11,6 @@ function neatLog (views, opts) {
 
   var logspeed = opts.logspeed || 250
   var state = {}
-  var output = []
   var log = logger([], opts)
   var bus = nanobus()
   bus.on('render', throttle(render, logspeed))
@@ -35,4 +34,3 @@ function neatLog (views, opts) {
     log.print()
   }
 }
-
