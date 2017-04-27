@@ -5,7 +5,7 @@ var throttle = require('lodash.throttle')
 module.exports = neatLog
 
 function neatLog (views, opts) {
-  if (!views) throw new Error('views required')
+  if (!views) throw new Error('neat-log: view required')
   if (!Array.isArray(views)) views = [views]
   if (!opts) opts = {}
 
@@ -15,6 +15,8 @@ function neatLog (views, opts) {
   var log = logger([], opts)
   var bus = nanobus()
   bus.on('render', throttle(render, logspeed))
+  bus.render = render
+  bus.clear = log.clear
 
   return {
     render: render,
