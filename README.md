@@ -4,7 +4,7 @@
 [![travis][travis-image]][travis-url]
 [![standard][standard-image]][standard-url]
 
-A neat logger for command line tools, inspired by [Choo](https://github.com/yoshuawuyts/choo)! I've heard so much about how awesome front-end javascript has gotten, I wanted to bring some of that magic to command line applications.
+A neat logger for command line tools, inspired by [Choo](https://github.com/yoshuawuyts/choo)! I've heard so much about how awesome front-end javascript has gotten, I wanted to bring some of that magic to command line applications. Used in the [Dat](https://github.com/datproject/dat) command line tool.
 
 * Use tagged template literals to output to console log.
 * Automatically diff template output with existing console (via [ansi-diff-stream](https://github.com/mafintosh/ansi-diff-stream))
@@ -48,6 +48,11 @@ I've been running for 0 seconds.
 ```
 
 And update every second!
+
+More examples:
+
+* [count-files](https://github.com/joehand/count-files) - basic example with a single view and use function.
+* [dat](https://github.com/datproject/dat) - full command line application with multiple views, components, etc.
 
 ## Install
 
