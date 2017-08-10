@@ -7,7 +7,7 @@
 A neat logger for command line tools, inspired by [Choo](https://github.com/yoshuawuyts/choo)! I've heard so much about how awesome front-end javascript has gotten, I wanted to bring some of that magic to command line applications. Used in the [Dat](https://github.com/datproject/dat) command line tool.
 
 * Use tagged template literals to output to console log.
-* Automatically diff template output with existing console (via [ansi-diff-stream](https://github.com/mafintosh/ansi-diff-stream))
+* Automatically diff template output with existing console (via [ansi-diff-stream](https://github.com/mafintosh/ansi-diff-stream)) (pretty much React for your terminal).
 * Update console output in any order with event based output.
 * Pretty neat!
 
@@ -51,6 +51,7 @@ And update every second!
 
 More examples:
 
+* [example folder](/examples)
 * [count-files](https://github.com/joehand/count-files) - basic example with a single view and use function.
 * [dat](https://github.com/datproject/dat) - full command line application with multiple views, components, etc.
 
@@ -67,7 +68,11 @@ Heavily inspired by Choo! If you get confused here, check docs there because the
 ### `var neat = neatLog(view(state), [opts])`
 
 * `views` is a single function or array of functions that return string(s) to output to the console. `views` are passed the `state` as the first argument.
-* `opts.logspeed`, default 250ms, throttles how often output is rendered.
+* `opts.logspeed` (default 250ms) - throttles how often output is rendered.
+* `opts.quiet` - shhhh.... do not print anything
+* `opts.debug` - print the whole view every time render is called.
+
+Both `opts.quiet` and `opts.debug` are handled in `status-logger`.
 
 ### `neat.use(callback(state, bus))`
 
@@ -100,7 +105,7 @@ Get a tagger for your template literals to make them nicer. Removes spaces and s
 ## TODO
 
 * Use `bus.on('*')` to make a cool debug option
-* `opts.debug` and `opts.quiet` ?
+* Be smarter about when lines break to multiple lines.
 * Other neat things
 
 ## License
