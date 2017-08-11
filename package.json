@@ -21,7 +21,7 @@
     "url": "https://github.com/joehand/neat-log.git"
   },
   "scripts": {
-    "test": "standard && tape test/*.js | tap-spec"
+    "test": "standard"
   },
   "dependencies": {
     "lodash.throttle": "^4.1.1",

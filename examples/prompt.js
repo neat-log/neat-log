@@ -41,7 +41,7 @@ log.use(function (state, bus) {
         hidden: true,
         replace: '=)'
       }
-  ], function (err, results) {
+    ], function (err, results) {
     if (err) return console.log(err.message)
     state.results = results
     bus.clear()
