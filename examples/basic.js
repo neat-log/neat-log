@@ -1,5 +1,5 @@
-var neatLog = require('.')
-var output = require('./output')
+var neatLog = require('..')
+var output = require('../output')
 var chalk = require('chalk')
 
 var views = [headerView, progressView]

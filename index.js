@@ -19,7 +19,8 @@ function neatLog (views, opts) {
 
   return {
     render: render,
-    use: register
+    use: register,
+    reset: log.diff.reset
   }
 
   function register (cb) {
@@ -31,6 +32,7 @@ function neatLog (views, opts) {
     views.map(function (view) {
       return log.messages.push(view(state))
     })
+    // could log.diff.reset here too?
     log.print()
   }
 }

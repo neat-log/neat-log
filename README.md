@@ -98,6 +98,10 @@ process.exit(1)
 
 For an immediate render. Helpful outside of a use function.
 
+### `neat.reset()`
+
+Reset the ansi-diff-stream instance. Can help fix broken lines or other weird printing output. Happens automatically on terminal resize.
+
 ### `var output = require('neat-log/output')`
 
 Get a tagger for your template literals to make them nicer. Removes spaces and stuff™.
