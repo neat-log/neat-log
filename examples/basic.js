@@ -16,7 +16,7 @@ function headerView (state) {
 function progressView (state) {
   if (!state.seconds) return 'Not counting yet...'
   return output`
-    ${chalk.blue(state.seconds)} ${state.seconds === 1 ? 'second' : 'seconds'}
+    ${chalk.blue(state.seconds)} ${state.seconds === 1 ? 'second' : 'seconds'} (This line is going to be longer so we can test breaks.)
   `
 }
 

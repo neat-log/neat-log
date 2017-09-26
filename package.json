@@ -26,6 +26,6 @@
   "dependencies": {
     "lodash.throttle": "^4.1.1",
     "nanobus": "^3.0.0",
-    "status-logger": "^3.1.0"
+    "status-logger": "^3.1.1"
   }
 }
