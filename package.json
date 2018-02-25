@@ -8,9 +8,7 @@
   },
   "devDependencies": {
     "prompt": "^1.0.0",
-    "standard": "*",
-    "tap-spec": "^4.0.2",
-    "tape": "^4.0.0"
+    "standard": "*"
   },
   "homepage": "https://github.com/joehand/neat-log",
   "keywords": [],
@@ -24,8 +22,8 @@
     "test": "standard"
   },
   "dependencies": {
+    "diffy": "^1.3.1",
     "lodash.throttle": "^4.1.1",
-    "nanobus": "^3.0.0",
-    "status-logger": "^3.1.1"
+    "nanobus": "^4.3.3"
   }
 }
