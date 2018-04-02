@@ -75,11 +75,15 @@ Heavily inspired by Choo! If you get confused here, check docs there because the
 
 Use a `function (state, bus)` to change state and emit events via the bus. You can call `bus.emit()` to emit a new event and `bus.on()` to listen. Emitter is an instance of [nanobus](https://github.com/yoshuawuyts/nanobus/).
 
-`bus` also has some special functions exposed:
+`bus` also has some special functions/events:
 
 #### `bus.render()`
 
 Cause an immediate render (normally it'd be throttled). This is helpful to do before exiting.
+
+#### `bus.on('exit')`
+
+Handle exit from `process.on('SIGINT')`. Useful for rendering exit messages, etc. If no handler is provided, process will exit.
 
 ### `neat.render()`
 

@@ -4,7 +4,7 @@ var nanobus = require('nanobus')
 var throttle = require('lodash.throttle')
 
 // Fix render issues from user input
-require('diffy/input')()
+var input = require('diffy/input')()
 
 module.exports = neatLog
 
@@ -21,7 +21,14 @@ function neatLog (views, opts) {
   bus.on('render', throttle(render, logspeed))
   bus.render = render
 
+  input.on('ctrl-c', function () {
+    render()
+    if (!bus.emit('exit')) return process.exit()
+    bus.emit('exit')
+  })
+
   return {
+    input: input,
     trim: trim,
     render: render,
     use: function (cb) {
