@@ -1,5 +1,6 @@
 var Diffy = require('diffy')
 var trim = require('diffy/trim')
+var input = require('diffy/input')()
 var nanobus = require('nanobus')
 var throttle = require('lodash.throttle')
 
@@ -27,6 +28,7 @@ function neatLog (views, opts) {
   }
 
   function render () {
+    if (opts.quiet) return
     diffy.render(function () {
       if (views.length === 1) return views[0](state)
       return views.map(function (view) {

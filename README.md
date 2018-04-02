@@ -70,7 +70,6 @@ Heavily inspired by Choo! If you get confused here, check docs there because the
 * `views` is a single function or array of functions that return string(s) to output to the console. `views` are passed the `state` as the first argument.
 * `opts.logspeed` (default 250ms) - throttles how often output is rendered.
 * `opts.quiet` - shhhh.... do not print anything
-* `opts.debug` - print the whole view every time render is called.
 
 ### `neat.use(callback(state, bus))`
 
@@ -88,7 +87,7 @@ For an immediate render. Helpful outside of a use function.
 
 ### `var output = require('neat-log/output')`
 
-Get a tagger for your template literals to make them nicer. Removes spaces and stuff™.
+Get a function to make your template literals nicer. Removes spaces and stuff™.
 
 ## License
 
