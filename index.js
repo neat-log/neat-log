@@ -1,8 +1,10 @@
 var Diffy = require('diffy')
 var trim = require('diffy/trim')
-var input = require('diffy/input')()
 var nanobus = require('nanobus')
 var throttle = require('lodash.throttle')
+
+// Fix render issues from user input
+require('diffy/input')()
 
 module.exports = neatLog
 
