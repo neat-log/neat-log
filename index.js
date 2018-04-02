@@ -1,6 +1,10 @@
-var logger = require('status-logger')
+var Diffy = require('diffy')
+var trim = require('diffy/trim')
 var nanobus = require('nanobus')
 var throttle = require('lodash.throttle')
+
+// Fix render issues from user input
+require('diffy/input')()
 
 module.exports = neatLog
 
@@ -11,28 +15,27 @@ function neatLog (views, opts) {
 
   var logspeed = opts.logspeed || 250
   var state = {}
-  var log = logger([], opts)
+  var diffy = Diffy(opts)
   var bus = nanobus()
+
   bus.on('render', throttle(render, logspeed))
   bus.render = render
-  bus.clear = log.clear
 
   return {
+    trim: trim,
     render: render,
-    use: register,
-    reset: log.diff.reset
-  }
-
-  function register (cb) {
-    cb(state, bus)
+    use: function (cb) {
+      cb(state, bus)
+    }
   }
 
   function render () {
-    log.messages = []
-    views.map(function (view) {
-      return log.messages.push(view(state))
+    if (opts.quiet) return
+    diffy.render(function () {
+      if (views.length === 1) return views[0](state)
+      return views.map(function (view) {
+        return view(state)
+      }).join('\n')
     })
-    // could log.diff.reset here too?
-    log.print()
   }
 }

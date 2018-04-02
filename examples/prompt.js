@@ -7,7 +7,7 @@ var log = neatLog(function view (state) {
   if (!state.results) return 'Hello to so neat prompt!'
 
   var results = state.results
-  return output`
+  return output(`
     Hello ${results.name}!
     You are ${results.havingFun ? 'definitely' : 'NOT'} having fun.
 
@@ -15,7 +15,7 @@ var log = neatLog(function view (state) {
 
     Shh....
     ${chalk.dim(results.secret)}
-  `
+  `)
 })
 
 log.use(function (state, bus) {
@@ -44,7 +44,6 @@ log.use(function (state, bus) {
     ], function (err, results) {
     if (err) return console.log(err.message)
     state.results = results
-    bus.clear()
     doThings()
   })
 

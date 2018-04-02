@@ -8,16 +8,16 @@ log.use(trackProgress)
 log.render() // force an immediate render
 
 function headerView (state) {
-  return output`
+  return output(`
     Hello World!
-  `
+  `)
 }
 
 function progressView (state) {
   if (!state.seconds) return 'Not counting yet...'
-  return output`
+  return output(`
     ${chalk.blue(state.seconds)} ${state.seconds === 1 ? 'second' : 'seconds'} (This line is going to be longer so we can test breaks.)
-  `
+  `)
 }
 
 function trackProgress (state, bus) {
