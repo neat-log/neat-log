@@ -23,7 +23,7 @@ function neatLog (views, opts) {
 
   input.on('ctrl-c', function () {
     render()
-    if (!bus.emit('exit')) return process.exit()
+    if (bus.listeners('exit').length === 0) return process.exit()
     bus.emit('exit')
   })
 
