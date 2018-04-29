@@ -14,7 +14,7 @@ function neatLog (views, opts) {
   if (!opts) opts = {}
 
   var logspeed = opts.logspeed || 250
-  var state = {}
+  var state = opts.state || {}
   var diffy = Diffy(opts)
   var bus = nanobus()
 
