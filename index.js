@@ -20,6 +20,7 @@ function neatLog (views, opts) {
 
   bus.on('render', throttle(render, logspeed))
   bus.render = render
+  bus.clear = clear
 
   input.on('ctrl-c', function () {
     render()
@@ -31,9 +32,15 @@ function neatLog (views, opts) {
     input: input,
     trim: trim,
     render: render,
+    clear: clear,
     use: function (cb) {
       cb(state, bus)
     }
+  }
+
+  function clear () {
+    diffy.render(function () { return '' })
+    process.nextTick(render)
   }
 
   function render () {

@@ -25,5 +25,10 @@ function trackProgress (state, bus) {
   setInterval(function () {
     state.seconds++
     bus.emit('render')
+    if (state.seconds === 5) {
+      log.clear()
+      console.log('All done')
+      process.exit(0)
+    }
   }, 1000)
 }
