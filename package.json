@@ -1,7 +1,7 @@
 {
   "name": "neat-log",
   "description": "a neat logger for the command line",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "author": "Joe Hand <joe@hand.email>",
   "bugs": {
     "url": "https://github.com/joehand/neat-log/issues"
