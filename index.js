@@ -3,8 +3,6 @@ var trim = require('diffy/trim')
 var nanobus = require('nanobus')
 var throttle = require('lodash.throttle')
 
-// Fix render issues from user input
-var input = require('diffy/input')()
 
 module.exports = neatLog
 
@@ -13,15 +11,20 @@ function neatLog (views, opts) {
   if (!Array.isArray(views)) views = [views]
   if (!opts) opts = {}
 
+
   var logspeed = opts.logspeed || 250
   var state = opts.state || {}
   var diffy = Diffy(opts)
   var bus = nanobus()
 
+  // Fix render issues from user input
+  var input = require('diffy/input')(opts)
+
   bus.on('render', throttle(render, logspeed))
   bus.render = render
   bus.clear = clear
 
+  diffy.on('resize', render)
   input.on('ctrl-c', function () {
     render()
     if (bus.listeners('exit').length === 0) return process.exit()
