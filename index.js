@@ -3,14 +3,12 @@ var trim = require('diffy/trim')
 var nanobus = require('nanobus')
 var throttle = require('lodash.throttle')
 
-
 module.exports = neatLog
 
 function neatLog (views, opts) {
   if (!views) throw new Error('neat-log: view required')
   if (!Array.isArray(views)) views = [views]
   if (!opts) opts = {}
-
 
   var logspeed = opts.logspeed || 250
   var state = opts.state || {}
