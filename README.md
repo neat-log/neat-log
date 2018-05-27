@@ -9,9 +9,10 @@ A neat logger for command line tools, inspired by [Choo](https://github.com/yosh
 * Use easy-to-read strings to create console outputs.
 * Automatically diff template output with existing console (via [diffy](https://github.com/mafintosh/diffy)) (pretty much React for your terminal).
 * Update console output in any order with event based output.
+* Handle command line input via [neat-input](https://github.com/mafintosh/neat-input).
 * Pretty neat!
 
-## Example
+### Example
 
 Each neat logger has two components: a `view` and functions that modify state and emit events.
 
@@ -51,9 +52,20 @@ And update every second!
 
 More examples:
 
-* [example folder](/examples)
-* [count-files](https://github.com/joehand/count-files) - basic example with a single view and use function.
 * [dat](https://github.com/datproject/dat) - full command line application with multiple views, components, etc.
+* [cabal](https://github.com/cabal-club/cabal) - p2p chat application.
+* [count-files](https://github.com/joehand/count-files) - simple example with a single view and use function.
+* [basic examples](/examples)
+
+### Components
+
+Neat-log works great with components, just like Choo!
+
+* [Task lister](https://github.com/joehand/neat-tasks): task runner with pretty output. Used in [dat-doctor](https://github.com/datproject/dat-doctor).
+* [Spinner](https://github.com/joehand/neat-spinner): pretty spinner for the cli.
+* [Text Blit](https://github.com/noffle/txt-blit): Draw lines of text onto other lines of text.
+
+You can use string-based components too! Check out [diff components](https://github.com/mafintosh/diffy#components) for more.
 
 ## Install
 
