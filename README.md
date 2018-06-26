@@ -106,9 +106,16 @@ For an immediate render. Helpful outside of a use function.
 
 Get a function to make your template literals nicer. Removes spaces and stuff™.
 
-## License
+## Licensing
 
-[MIT](LICENSE.md)
+This package is free to use for noncommercial purposes under the terms of the [License Zero Noncommercial Public License](./LICENSE)
+
+Licenses for long-term commercial use are available [via licensezero.com][project].
+
+[![licensezero.com pricing](https://licensezero.com/projects/0153a099-6acd-4023-8a96-9d81d9969a58/badge.svg)][project]
+
+[project]: https://licensezero.com/projects/0153a099-6acd-4023-8a96-9d81d9969a58
+
 
 [npm-image]: https://img.shields.io/npm/v/neat-log.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/neat-log

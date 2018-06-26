@@ -12,7 +12,7 @@
   },
   "homepage": "https://github.com/joehand/neat-log",
   "keywords": [],
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -25,5 +25,20 @@
     "diffy": "^2.0.0",
     "lodash.throttle": "^4.1.1",
     "nanobus": "^4.3.3"
-  }
+  },
+  "licensezero": [
+    {
+      "license": {
+        "jurisdiction": "US-OR",
+        "name": "Joe Hand",
+        "projectID": "0153a099-6acd-4023-8a96-9d81d9969a58",
+        "publicKey": "6810272b33887f67277e394fae831ebe67a93e253b131b2d654b3ae9ecd0a0ed",
+        "terms": "noncommercial",
+        "version": "2.0.1",
+        "homepage": "https://github.com/joehand/neat-log"
+      },
+      "licensorSignature": "207b92740b3eb6fe37bd5d10f02800f9d766be080a58432a6f9055f09983334c8a28d3d4b320be1979bbfeb5b46d24698643e2a74dfc8c8f5395677fc1d70a0f",
+      "agentSignature": "c42c21430de651fd6e1c7e92b9fece5d65a84351ef6762f4745b72b6f4f614de4c9fc4f4672208a76d40a3d5c22a049117face46c36024b426dace9049f4e608"
+    }
+  ]
 }
