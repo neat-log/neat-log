@@ -1,50 +1,52 @@
-License Zero Noncommercial Public License 2.0.1
+The Prosperity Public License 1.0.0
 
-Copyright: Joe Hand
+Copyright Notice: Joe Hand
 
-Source: https://github.com/joehand/neat-log
+Source Notice: https://github.com/joehand/neat-log
+
+This license lets you use and share this software for free,
+with a trial-length time limit on commercial use. Specifically:
+
+If you follow the rules below, you may do everything with
+this software that would otherwise infringe my copyright in
+it or any patent claim I can license that you would infringe
+by using this software as of my latest contribution.
+
+1. You must limit use of this software in any manner primarily
+   intended for or directed toward commercial advantage or
+   private monetary compensation to a trial period of 32
+   consecutive calendar days. This limit does not apply to use in
+   developing feedback, modifications, or extensions that you
+   contribute back to those giving this license.
+
+2. Ensure everyone who gets a copy of this software from you,
+   in source code or any other form, gets the text of this
+   license and the copyright and source notices above.
+
+3. Do not make any legal claim against anyone for infringing
+   any patent claim they would infringe by using this software
+   alone, accusing this software, with or without changes,
+   alone or as part of a larger program.
+
+You are excused for unknowingly breaking rule 1 if you stop
+doing anything requiring this license within 30 days of
+learning you broke the rule.
 
 **This software comes as is, without any warranty at all. As far
 as the law allows, I will not be liable for any damages related
 to this software or this license, for any kind of legal claim.**
 
-As long as you meet the conditions below, you may do everything
-with this software that would otherwise infringe my copyright in
-it or any covered patent claim. Your permission covers a patent
-claim that I can license, or become able to license, if you would
-infringe it by using this software as of my latest contribution.
-
-1. You must ensure that everyone who gets a copy of this software
-   from you, in source code or any other form, also gets the
-   complete text of this license and the copyright and source
-   notices above.
-
-2. You must not make any legal claim against anyone for
-   infringing any patent claim they would infringe by using this
-   software alone, accusing this software, with or without
-   changes, alone or combined into a larger program.
-
-3. You must limit use of this software in any manner primarily
-   intended for or directed toward commercial advantage or
-   private monetary compensation to a period of 32
-   consecutive calendar days. This limit does not apply to use in
-   developing feedback, modifications, or extensions that you
-   contribute back to those giving this license.
 
 ---
 
 Licensor Signature (Ed25519):
 
-a852b142305bd2fac16972d77528c4fa
-94148af70247684c3f5e7149cbc2f404
-97a638d73bf5057f16fa212fe48dfea4
-d20e09d6547bd2c5846d745c68d5ab03
+c8b7ff10743e5d0800feb8068cfb18bf96e76996b0ff56cc2a0b77f4d462974d
+d458878a610c1587afb060ca1de1db17a56538b2772cf9fa2020d7dd12472a04
 
 ---
 
 Agent Signature (Ed25519):
 
-4d8494fab22c73474c9ebd6052ed2b16
-67df6c71b4e15d676f60d6148b483cdc
-d5e4b15c8fd8e7dd58615937260211ba
-7cfbac5c871cd49fbbf3f447b6942f00
+6ce1e139d2d2b67dcdaa110d61bec29e7e2717674e36288a0298553d6418e4ee
+686b678eea49f197c0dcdf0b547a7a3740d6d3befb8d11dc6c64e0edf5b6f701

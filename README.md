@@ -106,15 +106,13 @@ For an immediate render. Helpful outside of a use function.
 
 Get a function to make your template literals nicer. Removes spaces and stuff™.
 
-## Licensing
+# Licensing
 
-This package is free to use for noncommercial purposes under the terms of the [License Zero Noncommercial Public License](./LICENSE)
+This package is free to use for noncommercial purposes and for commercial purposes during a trial period under the terms of the [Prosperity Public License](./LICENSE).
 
-Licenses for long-term commercial use are available [via licensezero.com][project].
+Licenses for long-term commercial use are available via [licensezero.com](https://licensezero.com).
 
-[![licensezero.com pricing](https://licensezero.com/projects/0153a099-6acd-4023-8a96-9d81d9969a58/badge.svg)][project]
-
-[project]: https://licensezero.com/projects/0153a099-6acd-4023-8a96-9d81d9969a58
+[![licensezero.com pricing](https://licensezero.com/projects/0153a099-6acd-4023-8a96-9d81d9969a58/badge.svg)](https://licensezero.com/projects/0153a099-6acd-4023-8a96-9d81d9969a58)
 
 
 [npm-image]: https://img.shields.io/npm/v/neat-log.svg?style=flat-square
@@ -123,3 +121,4 @@ Licenses for long-term commercial use are available [via licensezero.com][projec
 [travis-url]: https://travis-ci.org/joehand/neat-log
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: http://npm.im/standard
+

@@ -1,0 +1,18 @@
+{
+  "version": "",
+  "licensezero": [
+    {
+      "agentSignature": "44f275b1d6d394c8474d6bf8ef13f0668e5a753d4bb1e6c3bb3523652e791dec496d52ef832a4d07c296a43feae4c66e422c06f1818021532a6d836199491809",
+      "license": {
+        "homepage": "https://github.com/joehand/neat-log",
+        "jurisdiction": "US-OR",
+        "name": "Joe Hand",
+        "projectID": "0153a099-6acd-4023-8a96-9d81d9969a58",
+        "publicKey": "6810272b33887f67277e394fae831ebe67a93e253b131b2d654b3ae9ecd0a0ed",
+        "terms": "prosperity",
+        "version": "1.0.0"
+      },
+      "licensorSignature": "792ae1a849b28b205309eefa55262ac3f735981d10a307b566016cb458699b4d1b2617634b1f581ef206e57444eaa19ae4e00144ad89154262835d879e639504"
+    }
+  ]
+}
