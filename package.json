@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "prompt": "^1.0.0",
-    "standard": "*"
+    "standard": "^11.0.1"
   },
   "homepage": "https://github.com/joehand/neat-log",
   "keywords": [],
