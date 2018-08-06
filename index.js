@@ -22,7 +22,7 @@ function neatLog (views, opts) {
   bus.render = render
   bus.clear = clear
 
-  diffy.on('resize', render)
+  diffy.on('resize', clear)
   input.on('ctrl-c', function () {
     render()
     if (bus.listeners('exit').length === 0) return process.exit()
