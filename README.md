@@ -106,6 +106,10 @@ For an immediate render. Helpful outside of a use function.
 
 Get a function to make your template literals nicer. Removes spaces and stuff™.
 
+# Combines well with..
+
+- [txt-blit](https://github.com/noffle/txt-blit)
+
 # Licensing
 
 This package is free to use for noncommercial purposes and for commercial purposes during a trial period under the terms of the [Prosperity Public License](./LICENSE).
