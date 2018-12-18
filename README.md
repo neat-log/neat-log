@@ -9,7 +9,7 @@ A neat logger for command line tools, inspired by [Choo](https://github.com/yosh
 * Use easy-to-read strings to create console outputs.
 * Automatically diff template output with existing console (via [diffy](https://github.com/mafintosh/diffy)) (pretty much React for your terminal).
 * Update console output in any order with event based output.
-* Handle command line input via [neat-input](https://github.com/mafintosh/neat-input).
+* Handle command line input via integrated [neat-input](https://github.com/mafintosh/neat-input) on the `input` property ([example](https://github.com/cabal-club/cabal/blob/master/neat-screen.js#L28)).
 * Pretty neat!
 
 ### Example
