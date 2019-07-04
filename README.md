@@ -83,6 +83,7 @@ Heavily inspired by Choo! If you get confused here, check docs there because the
 * `opts.logspeed` (default 250ms) - throttles how often output is rendered.
 * `opts.quiet` - shhhh.... do not print anything
 * `opts.state` - pass in initial state
+* `opts.debug` - render to stdout without diffy'ing (only useful if `quiet` option not used)
 
 ### `neat.use(callback(state, bus))`
 

@@ -40,13 +40,17 @@ function neatLog (views, opts) {
   }
 
   function clear () {
-    diffy.render(function () { return '' })
+    !opts.debug ? diffy.render(function () { return '' }) : console.log('\x1Bc')
     process.nextTick(render)
+  }
+
+  function _render (what) {
+    !opts.debug ? diffy.render(what) : console.log(what())
   }
 
   function render () {
     if (opts.quiet) return
-    diffy.render(function () {
+    _render(function () {
       if (views.length === 1) return views[0](state)
       return views.map(function (view) {
         return view(state)
